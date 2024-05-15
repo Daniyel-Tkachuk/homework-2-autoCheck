@@ -2,11 +2,15 @@
     --header_height: 60px;
 }
 
+
 .hw {
     display: flex;
     flex-direction: column;
     width: 1140px;
+    padding: 30px 0;
     margin: auto;
+    border-top: 2px solid #D9D9D9;
+    border-bottom: 2px solid #D9D9D9;
 }
 
 .container {
@@ -16,6 +20,7 @@
 }
 
 .hwTitle {
+    text-align: center;
     font-weight: bold;
     font-size: 20px;
     line-height: 50px;
