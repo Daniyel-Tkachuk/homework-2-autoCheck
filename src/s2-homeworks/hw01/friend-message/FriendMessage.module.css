@@ -1,5 +1,8 @@
 .friendMessage {
-
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    margin: 10px 0;
 }
 
 .friendImageAndText {
@@ -49,12 +52,15 @@
 
 .friendMessageText {
     font-weight: 400;
+    max-width: 450px;
+    word-break: break-all;
+    white-space: normal;
 }
 
 .friendTime {
     position: absolute;
-    left: 0;
-    bottom: -15px;
+    left: 10px;
+    bottom: -20px;
     font-size: 10px;
     font-weight: 600;
     line-height: 12px;
