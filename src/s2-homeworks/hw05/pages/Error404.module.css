@@ -4,8 +4,9 @@
 }
 
 .wrapper {
-    align-items: center;
     display: flex;
-    height: calc(100vh - var(--header_height));
+    align-items: center;
     justify-content: center;
+    height: calc(100vh - var(--header_height));
+
 }
