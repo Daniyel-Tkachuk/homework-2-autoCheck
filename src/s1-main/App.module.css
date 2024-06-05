@@ -13,9 +13,8 @@
 }
 
 .container {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .hwTitle {

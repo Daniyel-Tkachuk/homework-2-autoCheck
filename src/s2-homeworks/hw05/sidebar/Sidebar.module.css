@@ -1,12 +1,13 @@
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: -317px;
+    left: -100%;
     width: 317px;
     height: 100%;
     background-color: #fff;
     box-shadow: 0 10px 40px rgba(29, 33, 38, 0.13), 0 1px 2px rgba(29, 33, 38, 0.1);
-    transition: all .3s ease;
+    transition: all .5s ease;
+    z-index: 2;
 }
 
 .sidebar.open {
@@ -14,6 +15,14 @@
 }
 
 .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .4;
+    z-index: 1;
 }
 
 .nav {
@@ -58,4 +67,6 @@
 }
 
 .close img {
+    width: 24px;
+    height: 24px;
 }
