@@ -1,15 +1,44 @@
 .radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 20px;
 }
 
-.radio::before {
-}
-
-
-.radio:checked::before {
+.radio:checked + .checkStyle::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
 }
 
-.options {
+.checkStyle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-left: -20px;
+}
+
+.span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+    padding-left: 5px;
 }
