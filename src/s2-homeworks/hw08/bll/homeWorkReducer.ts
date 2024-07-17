@@ -6,7 +6,7 @@ type ActionType =
 
 export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => {
    switch (action.type) {
-      case 'sort': { // by name
+      case 'sort': {
          const copyState = [...state];
          return action.payload === "up"
             ? copyState.sort((a, b) => a.name > b.name ? 1 : -1)
