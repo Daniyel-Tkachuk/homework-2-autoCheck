@@ -31,33 +31,46 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             <Pagination
                 id={id + '-pagination'}
                 sx={{
-                    // стили для Pagination // пишет студент
+                    '& .MuiButtonBase-root': {
+                        '&:hover': {
+                            bgcolor: "#419eff",
+                            color: "#fff"
+                        }
+                    },
+                    '& .Mui-selected': {
+                        bgcolor: "#0066CC !important",
+                        color: "#fff"
+                    },
                 }}
                 page={page}
                 count={lastPage}
                 onChange={onChangeCallback}
+                shape={"rounded"}
                 hideNextButton
                 hidePrevButton
             />
 
-            <span className={s.text1}>
-                показать
-            </span>
+            <div style={{display: 'flex', gap: "10px", marginLeft: "24px"}}>
+                <span className={s.text1}>
+                    показать
+                </span>
 
-            <SuperSelect
-                id={id + '-pagination-select'}
-                value={itemsCountForPage}
-                options={[
-                    {id: 4, value: 4},
-                    {id: 7, value: 7},
-                    {id: 10, value: 10},
-                ]}
-                onChange={onChangeSelect}
-            />
+                <SuperSelect
+                    id={id + '-pagination-select'}
+                    value={itemsCountForPage}
+                    options={[
+                        {id: 4, value: 4},
+                        {id: 7, value: 7},
+                        {id: 10, value: 10},
+                    ]}
+                    onChange={onChangeSelect}
+                    className={s.select}
+                />
 
-            <span className={s.text2}>
-                строк в таблице
-            </span>
+                <span className={s.text2}>
+                    строк в таблице
+                </span>
+            </div>
         </div>
     )
 }

@@ -2,26 +2,39 @@
     width: 50vw;
 }
 
-.developer {
 
-}
-
-.techHeader {
+.techHeader,
+.developerHeader{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     width: 50vw;
-}
-
-.developerHeader {
-
 }
 
 .row {
     display: flex;
+    max-width: 606px;
+    padding: 11px 17px;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .rowHeader {
     display: flex;
+    margin-top: 36px;
+    max-width: 606px;
+    padding: 11px 17px;
+    background-color: #E5E5E5;
 }
 
 .loading {
-
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6); /* полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
