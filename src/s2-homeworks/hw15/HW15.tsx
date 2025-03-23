@@ -68,24 +68,14 @@ const HW15 = () => {
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
         setSort(newSort)
         setPage(1)
         sendQuery({sort, page, count})
         setSearchParams(newSort)
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
     }
 
     useEffect(() => {
-        console.log("searchParams", searchParams)
         const params = Object.fromEntries(searchParams)
-        console.log("Object fromEntries", params)
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)

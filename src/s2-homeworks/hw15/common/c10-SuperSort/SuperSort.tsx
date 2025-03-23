@@ -1,11 +1,13 @@
 import React from 'react'
 import iconUp from '../../icon/up.svg'
 import iconDown from '../../icon/down.svg'
+import sortIcon from '../../icon/iconSort.png'
 
 // добавить в проект иконки и импортировать
 const downIcon = iconDown
 const upIcon = iconUp
-const noneIcon = '[--]'
+// const noneIcon = '[--]'
+const noneIcon = sortIcon
 
 export type SuperSortPropsType = {
     id?: string
@@ -54,7 +56,17 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         <span
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
-            style={{ display: 'flex', alignItems: 'center', gap: '4px', cursor: 'pointer' }}
+            style={{
+                position: "relative",
+                top: "2px",
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                cursor: 'pointer',
+                width: "12px",
+                height: "12px",
+                objectFit: "cover"
+        }}
         >
 
             <img
